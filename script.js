@@ -147,7 +147,7 @@
   
     function proclaimVictory() {
       alert('Victory!');
-      window.location('http://www.youtube.com/watch?v=oHg5SJYRHA0');
+      document.location.reload(true);
     }
   
     return checkEachAngle;
