@@ -1,3 +1,10 @@
+div#board {
+  margin: auto;
+  padding: 1em;
+}
+div#board .row {
+  clear: both;
+}
 div#board .slot {
   height: 60px;
   width: 60px;

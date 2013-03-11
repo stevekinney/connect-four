@@ -43,12 +43,13 @@ function getCoordinates(element) {
 function playSpot(element) {
   // Dig down recusively if there is an empty slot below
   var below = move.south(element);
-  if ( below && isEmpty(below) ) {
+  if ( below && !isPlayed(below) ) {
     return playSpot(below);
   }
   
   if ( !isPlayed(element) ) {
     markPlayed(element, players.nextPlayer());
+    checkForVictory(element);
   } else {
     console.log('This spot has been played!')
   }
@@ -65,10 +66,6 @@ function isPlayed(element) {
   } else {
     return false;
   }
-}
-
-function isEmpty(element) {
-  return !!element.className.match('unplayed');
 }
 
 var move = (function() {
@@ -108,6 +105,48 @@ var root = (function () {
       horizontal: followToRoot.bind(null, 'west'),
       vertical: followToRoot.bind(null, 'south'),
       diagonalForward: followToRoot.bind(null, 'southwest'),
-      diagonalBackward: followToRoot.bind(null, 'east')
+      diagonalBackward: followToRoot.bind(null, 'southeast')
     };
+})();
+
+var checkForVictory = (function() {
+  
+  var directions = {
+    horizontal: 'east',
+    vertical: 'north',
+    diagonalBackward: 'northwest',
+    diagonalForward: 'northeast'
+  }
+  
+  function walk(direction, element, step) {
+    if ( step >= 3 ) return proclaimVictory();
+    
+    var next = move[direction](element);
+    
+    if ( adjacentIsValid(element, next) ) {
+      return walk(direction, next, ++step);
+    }
+  }
+  
+  function beginWalk(angle, element) {
+    var rootCell = root[angle](element);
+    walk(directions[angle], rootCell, 0);
+  }
+  
+  function checkEachAngle(element) {
+    beginWalk('vertical', element);
+    beginWalk('horizontal', element);
+    beginWalk('diagonalForward', element);
+    beginWalk('diagonalBackward', element);
+  }
+  
+  function adjacentIsValid(current, next) {
+    return typeof next !== 'undefined' && isPlayed(current) === isPlayed(next);
+  }
+  
+  function proclaimVictory() {
+    alert('Victory!')
+  }
+  
+  return checkEachAngle;
 })();
