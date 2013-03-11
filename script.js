@@ -3,25 +3,26 @@ var slots = document.getElementsByClassName('slot');
 (function initialize() {
   Array.prototype.forEach.call(slots, function(slot) {
     slot.addEventListener('click', function() {
+      console.log(this);
       playSpot(this);
     });
   });
 })();
 
 function isArray(object) {
-  return Object.prototype.toString.call(object) === "[object Array]"
+  return Object.prototype.toString.call(object) === "[object Array]";
 }
 
 // Wrap current player status in a closure.
 var players = (function() {
-  var currentTurn = 1;
+  var currentTurn = 2;
   
   return {
     currentPlayer: function() {
-      return currentTurn % 2
+      return currentTurn % 2 + 1;
     },
     nextPlayer: function() {
-      return currentTurn++ % 2
+      return currentTurn++ % 2 + 1;
     }
   }
 })();
@@ -31,7 +32,7 @@ function findByCoordinates(x, y) {
     y = x[1];
     x = x[0];
   }
-  return document.getElementsByClassName('row' + y + ' col' + x)[0];
+  return document.getElementsByClassName('col' + x + ' row' + y)[0];
 }
 
 function getCoordinates(element) {
@@ -71,7 +72,6 @@ function isEmpty(element) {
 }
 
 var move = (function() {
- 
   var getAdjacent = function(offsetx, offsety, element) {
     var coordinates = getCoordinates(element);
     coordinates[0] = coordinates[0] + offsetx;
@@ -91,18 +91,23 @@ var move = (function() {
   }
 })();
 
-function findRoot(element, direction, step) {
+var root = (function () {
+  function followToRoot(direction, element, callback) {
+    var adjacent = move[direction](element),
+        player = isPlayed(element);
   
-  if ( !step ) step = 0;
-  
-  var player = isPlayed(element),
-      adjacentSlot = move[direction](element);
-      
-  if ( adjacentSlot && isPlayed(adjacentSlot) === player && step < 4 ) {
-    step += step;
-    findRoot(element, direction, step);
-  } else {
-    return element;
+    // Recursively look for the beginning of a streak
+    if ( adjacent && isPlayed(adjacent) === player) {
+      return followToRoot(direction, adjacent);
+    } else {
+      return element;
+    }
   }
   
-}
+  return {
+      horizontal: followToRoot.bind(null, 'west'),
+      vertical: followToRoot.bind(null, 'south'),
+      diagonalForward: followToRoot.bind(null, 'southwest'),
+      diagonalBackward: followToRoot.bind(null, 'east')
+    };
+})();

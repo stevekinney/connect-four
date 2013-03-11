@@ -1,9 +1,17 @@
-div#board {
-  border: 1px solid #CCC;
-}
 div#board .slot {
-  background-color: #EEE;
   height: 60px;
-  width: 10%;
+  width: 60px;
   float: left;
+}
+div#board .unplayed {
+  background-color: #CCC;
+  border: 1px solid #DDD;
+}
+div#board .player1 {
+  background-color: #E66;
+  border: 1px solid #C55;
+}
+div#board .player2 {
+  background-color: #66E;
+  border: 1px solid #55C;
 }
