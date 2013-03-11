@@ -1,0 +1,9 @@
+div#board {
+  border: 1px solid #CCC;
+}
+div#board .slot {
+  background-color: #EEE;
+  height: 60px;
+  width: 10%;
+  float: left;
+}

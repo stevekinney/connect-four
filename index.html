@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Connect Four</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="board">
+        <div class="row0 row">
+          <div class="row0 col0 slot unplayed" data-row="0" data-column="0">&nbsp;</div>
+          <div class="row0 col1 slot unplayed" data-row="0" data-column="1">&nbsp;</div>
+          <div class="row0 col2 slot unplayed" data-row="0" data-column="2">&nbsp;</div>
+          <div class="row0 col3 slot unplayed" data-row="0" data-column="3">&nbsp;</div>
+          <div class="row0 col4 slot unplayed" data-row="0" data-column="4">&nbsp;</div>
+          <div class="row0 col5 slot unplayed" data-row="0" data-column="5">&nbsp;</div>
+          <div class="row0 col6 slot unplayed" data-row="0" data-column="6">&nbsp;</div>
+          <div class="row0 col7 slot unplayed" data-row="0" data-column="7">&nbsp;</div>
+          <div class="row0 col8 slot unplayed" data-row="0" data-column="8">&nbsp;</div>
+          <div class="row0 col9 slot unplayed" data-row="0" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row1 row">
+          <div class="row1 col0 slot unplayed" data-row="1" data-column="0">&nbsp;</div>
+          <div class="row1 col1 slot unplayed" data-row="1" data-column="1">&nbsp;</div>
+          <div class="row1 col2 slot unplayed" data-row="1" data-column="2">&nbsp;</div>
+          <div class="row1 col3 slot unplayed" data-row="1" data-column="3">&nbsp;</div>
+          <div class="row1 col4 slot unplayed" data-row="1" data-column="4">&nbsp;</div>
+          <div class="row1 col5 slot unplayed" data-row="1" data-column="5">&nbsp;</div>
+          <div class="row1 col6 slot unplayed" data-row="1" data-column="6">&nbsp;</div>
+          <div class="row1 col7 slot unplayed" data-row="1" data-column="7">&nbsp;</div>
+          <div class="row1 col8 slot unplayed" data-row="1" data-column="8">&nbsp;</div>
+          <div class="row1 col9 slot unplayed" data-row="1" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row2 row">
+          <div class="row2 col0 slot unplayed" data-row="2" data-column="0">&nbsp;</div>
+          <div class="row2 col1 slot unplayed" data-row="2" data-column="1">&nbsp;</div>
+          <div class="row2 col2 slot unplayed" data-row="2" data-column="2">&nbsp;</div>
+          <div class="row2 col3 slot unplayed" data-row="2" data-column="3">&nbsp;</div>
+          <div class="row2 col4 slot unplayed" data-row="2" data-column="4">&nbsp;</div>
+          <div class="row2 col5 slot unplayed" data-row="2" data-column="5">&nbsp;</div>
+          <div class="row2 col6 slot unplayed" data-row="2" data-column="6">&nbsp;</div>
+          <div class="row2 col7 slot unplayed" data-row="2" data-column="7">&nbsp;</div>
+          <div class="row2 col8 slot unplayed" data-row="2" data-column="8">&nbsp;</div>
+          <div class="row2 col9 slot unplayed" data-row="2" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row3 row">
+          <div class="row3 col0 slot unplayed" data-row="3" data-column="0">&nbsp;</div>
+          <div class="row3 col1 slot unplayed" data-row="3" data-column="1">&nbsp;</div>
+          <div class="row3 col2 slot unplayed" data-row="3" data-column="2">&nbsp;</div>
+          <div class="row3 col3 slot unplayed" data-row="3" data-column="3">&nbsp;</div>
+          <div class="row3 col4 slot unplayed" data-row="3" data-column="4">&nbsp;</div>
+          <div class="row3 col5 slot unplayed" data-row="3" data-column="5">&nbsp;</div>
+          <div class="row3 col6 slot unplayed" data-row="3" data-column="6">&nbsp;</div>
+          <div class="row3 col7 slot unplayed" data-row="3" data-column="7">&nbsp;</div>
+          <div class="row3 col8 slot unplayed" data-row="3" data-column="8">&nbsp;</div>
+          <div class="row3 col9 slot unplayed" data-row="3" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row4 row">
+          <div class="row4 col0 slot unplayed" data-row="4" data-column="0">&nbsp;</div>
+          <div class="row4 col1 slot unplayed" data-row="4" data-column="1">&nbsp;</div>
+          <div class="row4 col2 slot unplayed" data-row="4" data-column="2">&nbsp;</div>
+          <div class="row4 col3 slot unplayed" data-row="4" data-column="3">&nbsp;</div>
+          <div class="row4 col4 slot unplayed" data-row="4" data-column="4">&nbsp;</div>
+          <div class="row4 col5 slot unplayed" data-row="4" data-column="5">&nbsp;</div>
+          <div class="row4 col6 slot unplayed" data-row="4" data-column="6">&nbsp;</div>
+          <div class="row4 col7 slot unplayed" data-row="4" data-column="7">&nbsp;</div>
+          <div class="row4 col8 slot unplayed" data-row="4" data-column="8">&nbsp;</div>
+          <div class="row4 col9 slot unplayed" data-row="4" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row5 row">
+          <div class="row5 col0 slot unplayed" data-row="5" data-column="0">&nbsp;</div>
+          <div class="row5 col1 slot unplayed" data-row="5" data-column="1">&nbsp;</div>
+          <div class="row5 col2 slot unplayed" data-row="5" data-column="2">&nbsp;</div>
+          <div class="row5 col3 slot unplayed" data-row="5" data-column="3">&nbsp;</div>
+          <div class="row5 col4 slot unplayed" data-row="5" data-column="4">&nbsp;</div>
+          <div class="row5 col5 slot unplayed" data-row="5" data-column="5">&nbsp;</div>
+          <div class="row5 col6 slot unplayed" data-row="5" data-column="6">&nbsp;</div>
+          <div class="row5 col7 slot unplayed" data-row="5" data-column="7">&nbsp;</div>
+          <div class="row5 col8 slot unplayed" data-row="5" data-column="8">&nbsp;</div>
+          <div class="row5 col9 slot unplayed" data-row="5" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row6 row">
+          <div class="row6 col0 slot unplayed" data-row="6" data-column="0">&nbsp;</div>
+          <div class="row6 col1 slot unplayed" data-row="6" data-column="1">&nbsp;</div>
+          <div class="row6 col2 slot unplayed" data-row="6" data-column="2">&nbsp;</div>
+          <div class="row6 col3 slot unplayed" data-row="6" data-column="3">&nbsp;</div>
+          <div class="row6 col4 slot unplayed" data-row="6" data-column="4">&nbsp;</div>
+          <div class="row6 col5 slot unplayed" data-row="6" data-column="5">&nbsp;</div>
+          <div class="row6 col6 slot unplayed" data-row="6" data-column="6">&nbsp;</div>
+          <div class="row6 col7 slot unplayed" data-row="6" data-column="7">&nbsp;</div>
+          <div class="row6 col8 slot unplayed" data-row="6" data-column="8">&nbsp;</div>
+          <div class="row6 col9 slot unplayed" data-row="6" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row7 row">
+          <div class="row7 col0 slot unplayed" data-row="7" data-column="0">&nbsp;</div>
+          <div class="row7 col1 slot unplayed" data-row="7" data-column="1">&nbsp;</div>
+          <div class="row7 col2 slot unplayed" data-row="7" data-column="2">&nbsp;</div>
+          <div class="row7 col3 slot unplayed" data-row="7" data-column="3">&nbsp;</div>
+          <div class="row7 col4 slot unplayed" data-row="7" data-column="4">&nbsp;</div>
+          <div class="row7 col5 slot unplayed" data-row="7" data-column="5">&nbsp;</div>
+          <div class="row7 col6 slot unplayed" data-row="7" data-column="6">&nbsp;</div>
+          <div class="row7 col7 slot unplayed" data-row="7" data-column="7">&nbsp;</div>
+          <div class="row7 col8 slot unplayed" data-row="7" data-column="8">&nbsp;</div>
+          <div class="row7 col9 slot unplayed" data-row="7" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row8 row">
+          <div class="row8 col0 slot unplayed" data-row="8" data-column="0">&nbsp;</div>
+          <div class="row8 col1 slot unplayed" data-row="8" data-column="1">&nbsp;</div>
+          <div class="row8 col2 slot unplayed" data-row="8" data-column="2">&nbsp;</div>
+          <div class="row8 col3 slot unplayed" data-row="8" data-column="3">&nbsp;</div>
+          <div class="row8 col4 slot unplayed" data-row="8" data-column="4">&nbsp;</div>
+          <div class="row8 col5 slot unplayed" data-row="8" data-column="5">&nbsp;</div>
+          <div class="row8 col6 slot unplayed" data-row="8" data-column="6">&nbsp;</div>
+          <div class="row8 col7 slot unplayed" data-row="8" data-column="7">&nbsp;</div>
+          <div class="row8 col8 slot unplayed" data-row="8" data-column="8">&nbsp;</div>
+          <div class="row8 col9 slot unplayed" data-row="8" data-column="9">&nbsp;</div>
+        </div>
+        <div class="row9 row">
+          <div class="row9 col0 slot unplayed" data-row="9" data-column="0">&nbsp;</div>
+          <div class="row9 col1 slot unplayed" data-row="9" data-column="1">&nbsp;</div>
+          <div class="row9 col2 slot unplayed" data-row="9" data-column="2">&nbsp;</div>
+          <div class="row9 col3 slot unplayed" data-row="9" data-column="3">&nbsp;</div>
+          <div class="row9 col4 slot unplayed" data-row="9" data-column="4">&nbsp;</div>
+          <div class="row9 col5 slot unplayed" data-row="9" data-column="5">&nbsp;</div>
+          <div class="row9 col6 slot unplayed" data-row="9" data-column="6">&nbsp;</div>
+          <div class="row9 col7 slot unplayed" data-row="9" data-column="7">&nbsp;</div>
+          <div class="row9 col8 slot unplayed" data-row="9" data-column="8">&nbsp;</div>
+          <div class="row9 col9 slot unplayed" data-row="9" data-column="9">&nbsp;</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
