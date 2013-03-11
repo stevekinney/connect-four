@@ -4,6 +4,8 @@ The classic game of Connect Four. Basically, I wanted to give myself a little ch
 
 I've tested it it the latest builds of Chrome, Firefox, and Safari. It does use ES5's `Array.prototype.forEach` method, so it definitely won't work in browsers that don't support ES6.
 
+Check it out [here](http://stevekinney.github.com/connect-four).
+
 ## To Do
 
 * Come up with something a little more graceful than refreshing the page upon victory.
