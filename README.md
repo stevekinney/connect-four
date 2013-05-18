@@ -11,5 +11,5 @@ Check it out [here](http://stevekinney.github.com/connect-four).
 * Come up with something a little more graceful than refreshing the page upon victory.
 * Set up a shim for `Array.prototype.forEach`.
 * Use callbacks where appropriate.
-* Set basic AI player.
+* Set up a basic AI player.
 * Hook it up to Socket.io and make it multiplayer.
