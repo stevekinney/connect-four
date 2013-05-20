@@ -6,6 +6,8 @@ I've tested it it the latest builds of Chrome, Firefox, and Safari. It does use 
 
 Check it out [here](http://stevekinney.github.com/connect-four). I made it when I was considering applying to [Hacker School][hs]. One of the application questions was to submit something you built without using a framework. I built this little game as a response.
 
+[hs]: https://www.hackerschool.com "Hacker School"
+
 ## To Do
 
 * Come up with something a little more graceful than refreshing the page upon victory.
