@@ -4,7 +4,7 @@ The classic game of Connect Four. Basically, I wanted to give myself a little ch
 
 I've tested it it the latest builds of Chrome, Firefox, and Safari. It does use ES5's `Array.prototype.forEach` method, so it definitely won't work in browsers that don't support ES5.
 
-Check it out [here](http://stevekinney.github.com/connect-four).
+Check it out [here](http://stevekinney.github.com/connect-four). I made it when I was considering applying to [Hacker School][hs]. One of the application questions was to submit something you built without using a framework. I built this little game as a response.
 
 ## To Do
 
